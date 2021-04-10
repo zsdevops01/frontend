@@ -20,8 +20,8 @@ Let's download the HTDOCS content and deploy under the Nginx path.
 Deploy in Nginx Default Location.
 
 ```
-# rm -rf /usr/share/nginx/html /etc/nginx/sites-enabled/default /etc/nginx/sites-available/default
-# cd /usr/shar/nginx
+# rm -rf /var/www/html /etc/nginx/sites-enabled/default /etc/nginx/sites-available/default
+# cd /var/www
 # unzip /tmp/frontend.zip
 # mv frontend-main/* .
 # mv static html

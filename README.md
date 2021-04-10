@@ -21,10 +21,11 @@ Deploy in Nginx Default Location.
 
 ```
 # rm -rf /usr/share/nginx/html /etc/nginx/sites-enabled/default /etc/nginx/sites-available/default
+# cd /usr/shar/nginx
 # unzip /tmp/frontend.zip
 # mv frontend-main/* .
 # mv static html
-# rm -rf frontend-master README.md
+# rm -rf frontend-main README.md
 # mv roboshop.conf /etc/nginx/sites-enabled//roboshop.conf
 ```
 

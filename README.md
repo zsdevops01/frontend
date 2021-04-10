@@ -5,7 +5,8 @@ The frontend is the service in RobotShop to serve the web content over Nginx.
 To Install Nginx.
 
 ```
-# yum install nginx -y
+# apt update
+# apt install nginx -y
 # systemctl enable nginx 
 # systemctl start nginx 
 ```
@@ -19,13 +20,12 @@ Let's download the HTDOCS content and deploy under the Nginx path.
 Deploy in Nginx Default Location.
 
 ```
-# cd /usr/share/nginx/html
-# rm -rf * 
+# rm -rf /usr/share/nginx/html /etc/nginx/sites-enabled/default /etc/nginx/sites-available/default
 # unzip /tmp/frontend.zip
 # mv frontend-main/* .
-# mv static/* .
+# mv static html
 # rm -rf frontend-master README.md
-# mv localhost.conf /etc/nginx/default.d/roboshop.conf
+# mv roboshop.conf /etc/nginx/sites-enabled//roboshop.conf
 ```
 
 Finally restart the service once to effect the changes.
@@ -44,7 +44,6 @@ Working App Screenshorts.
 ![image](https://user-images.githubusercontent.com/29029753/114181981-c5898900-995f-11eb-9206-1cf97431d44b.png)
 
 ![image](https://user-images.githubusercontent.com/29029753/114182013-cde1c400-995f-11eb-8847-1a736352682a.png)
-
 
 ![image](https://user-images.githubusercontent.com/29029753/114182026-d20de180-995f-11eb-9b82-04807d4bf8ea.png)
 

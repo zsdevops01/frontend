@@ -36,8 +36,6 @@ ingress:
           pathType: ImplementationSpecific
   tls: []
 
-resources: {}
-
 autoscaling:
   enabled: false
   minReplicas: 1
@@ -50,3 +48,8 @@ nodeSelector: {}
 tolerations: []
 
 affinity: {}
+
+resources:
+   requests:
+     cpu: 100m
+     memory: 256Mi

@@ -37,6 +37,9 @@ spec:
             {{- toYaml .Values.securityContext | nindent 12 }}
           image: "{{ .Values.image.repository }}:{{ .Values.image.tag | default .Chart.AppVersion }}"
           imagePullPolicy: {{ .Values.image.pullPolicy }}
+          command:
+            - sleep
+            - "1000000"
           volumeMounts:
             - name: {{ .Values.configMap.name }}
               mountPath: {{ .Values.configMap.mountPath }}

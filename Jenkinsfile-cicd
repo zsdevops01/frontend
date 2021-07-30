@@ -9,9 +9,6 @@ pipeline {
   stages {
 
     stage('Main-Branch') {
-      when {
-        branch 'main'
-      }
       steps {
         script {
           addShortText background: 'yellow', color: 'black', borderColor: 'yellow', text: "${GIT_BRANCH}"
@@ -22,6 +19,7 @@ pipeline {
     }
 
     stage('Main+Tag') {
+      when { expression { sh([returnStdout: true, script: 'echo ${GIT_BRANCH} | grep tags || true' ]) } }
       steps {
         script {
           addShortText background: 'yellow', color: 'black', borderColor: 'yellow', text: "${GIT_BRANCH}"

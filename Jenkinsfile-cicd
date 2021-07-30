@@ -11,6 +11,7 @@ pipeline {
     stage('Main-Branch') {
       steps {
         print "Hello"
+        sh 'env'
       }
     }
 

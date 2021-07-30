@@ -10,6 +10,9 @@ pipeline {
 
     stage('Main-Branch') {
       steps {
+        script {
+          addShortText background: 'yellow', color: 'black', borderColor: 'yellow', text: "${GIT_BRANCH}"
+        }
         print "Hello"
         sh 'env'
       }

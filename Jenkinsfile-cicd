@@ -1,0 +1,19 @@
+pipeline {
+  agent any
+
+  stages {
+
+    stage('One') {
+      steps {
+        print "Hello"
+      }
+    }
+
+    stage('Two') {
+      steps {
+        print "Two"
+      }
+    }
+
+  }
+}

@@ -23,6 +23,9 @@ pipeline {
 
     stage('Main+Tag') {
       steps {
+        script {
+          addShortText background: 'yellow', color: 'black', borderColor: 'yellow', text: "${GIT_BRANCH}"
+        }
         print "Two"
       }
     }

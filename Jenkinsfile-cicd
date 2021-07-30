@@ -9,6 +9,9 @@ pipeline {
   stages {
 
     stage('Main-Branch') {
+      when {
+        branch 'main'
+      }
       steps {
         script {
           addShortText background: 'yellow', color: 'black', borderColor: 'yellow', text: "${GIT_BRANCH}"
